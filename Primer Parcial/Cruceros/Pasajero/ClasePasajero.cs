@@ -1,0 +1,1 @@
+﻿enum Clase { Turista = 0, Premium = 1 }

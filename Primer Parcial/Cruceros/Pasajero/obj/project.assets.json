@@ -1,0 +1,109 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Equipajes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Equipajes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Equipajes.dll": {}
+        }
+      },
+      "Pasaportes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Pasaportes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Pasaportes.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Equipajes/1.0.0": {
+      "type": "project",
+      "path": "../Equipajes/Equipajes.csproj",
+      "msbuildProject": "../Equipajes/Equipajes.csproj"
+    },
+    "Pasaportes/1.0.0": {
+      "type": "project",
+      "path": "../Pasaporte/Pasaportes.csproj",
+      "msbuildProject": "../Pasaporte/Pasaportes.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "Equipajes >= 1.0.0",
+      "Pasaportes >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\flias\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\flias\\source\\repos\\Laboratorio---Programacion-II\\Primer Parcial\\Cruceros\\Pasajero\\Pasajeros.csproj",
+      "projectName": "Pasajeros",
+      "projectPath": "C:\\Users\\flias\\source\\repos\\Laboratorio---Programacion-II\\Primer Parcial\\Cruceros\\Pasajero\\Pasajeros.csproj",
+      "packagesPath": "C:\\Users\\flias\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\flias\\source\\repos\\Laboratorio---Programacion-II\\Primer Parcial\\Cruceros\\Pasajero\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\flias\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\Users\\flias\\source\\repos\\Laboratorio---Programacion-II\\Primer Parcial\\Cruceros\\Equipajes\\Equipajes.csproj": {
+              "projectPath": "C:\\Users\\flias\\source\\repos\\Laboratorio---Programacion-II\\Primer Parcial\\Cruceros\\Equipajes\\Equipajes.csproj"
+            },
+            "C:\\Users\\flias\\source\\repos\\Laboratorio---Programacion-II\\Primer Parcial\\Cruceros\\Pasaporte\\Pasaportes.csproj": {
+              "projectPath": "C:\\Users\\flias\\source\\repos\\Laboratorio---Programacion-II\\Primer Parcial\\Cruceros\\Pasaporte\\Pasaportes.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.412\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
