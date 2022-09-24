@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
-      "Cruceros/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/Cruceros.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Cruceros.dll": {}
-        }
-      }
-    }
+    "net5.0": {}
   },
-  "libraries": {
-    "Cruceros/1.0.0": {
-      "type": "project",
-      "path": "../Cruceros/Cruceros.csproj",
-      "msbuildProject": "../Cruceros/Cruceros.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0": [
-      "Cruceros >= 1.0.0"
-    ]
+    "net5.0": []
   },
   "packageFolders": {
     "C:\\Users\\flias\\.nuget\\packages\\": {}
@@ -52,11 +33,7 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {
-            "C:\\Users\\flias\\source\\repos\\Laboratorio---Programacion-II\\Primer Parcial\\Cruceros\\Cruceros\\Cruceros.csproj": {
-              "projectPath": "C:\\Users\\flias\\source\\repos\\Laboratorio---Programacion-II\\Primer Parcial\\Cruceros\\Cruceros\\Cruceros.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

@@ -11,7 +11,8 @@ namespace Viajes
         private Crucero crucero;
         private int cantidadCamarotesDisponiblesPremium;
         private int cantidadCamarotesDisponiblesTurista;
-        private double costoPasaje;
+        private double costoPasajeTurista;
+        private double costoPasajePremium;
         private Random duracionDelViaje;
 
     }
