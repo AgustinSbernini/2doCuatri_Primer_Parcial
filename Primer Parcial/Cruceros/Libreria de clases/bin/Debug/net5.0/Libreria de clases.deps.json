@@ -6,11 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "Forms/1.0.0": {
-        "runtime": {
-          "Forms.dll": {}
-        }
-      },
       "Libreria de clases/1.0.0": {
         "runtime": {
           "Libreria de clases.dll": {}
@@ -19,11 +14,6 @@
     }
   },
   "libraries": {
-    "Forms/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Libreria de clases/1.0.0": {
       "type": "project",
       "serviceable": false,

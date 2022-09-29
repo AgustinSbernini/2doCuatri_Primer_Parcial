@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Libreria_de_clases
 {
-    class Pasaporte
+    public class Pasaporte
     {
         private string nombre;
         private string apellido;

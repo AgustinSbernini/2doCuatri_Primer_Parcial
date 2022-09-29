@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Libreria_de_clases
 {
-    class Pasajero : Pasaporte
+    public class Pasajero : Pasaporte
     {
         private int edad;
         private Pasaporte pasaporte;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Libreria_de_clases
 {
-    class Equipaje
+    public class Equipaje
     {
         private bool bolsoDeMano;
         private int cantidadValijas;

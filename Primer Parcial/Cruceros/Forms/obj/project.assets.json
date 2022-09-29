@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {}
+    "net5.0-windows7.0": {
+      "Libreria de clases/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Libreria de clases.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Libreria de clases.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Libreria de clases/1.0.0": {
+      "type": "project",
+      "path": "../Libreria de clases/Libreria de clases.csproj",
+      "msbuildProject": "../Libreria de clases/Libreria de clases.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": []
+    "net5.0-windows7.0": [
+      "Libreria de clases >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\flias\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\flias\\source\\repos\\Laboratorio---Programacion-II\\Primer Parcial\\Cruceros\\Libreria de clases\\Libreria de clases.csproj": {
+              "projectPath": "C:\\Users\\flias\\source\\repos\\Laboratorio---Programacion-II\\Primer Parcial\\Cruceros\\Libreria de clases\\Libreria de clases.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

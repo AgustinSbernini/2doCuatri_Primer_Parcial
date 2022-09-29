@@ -16,3 +16,7 @@ C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Crucero
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\obj\Debug\net5.0-windows\ref\Forms.dll
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\obj\Debug\net5.0-windows\Forms.pdb
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\obj\Debug\net5.0-windows\Forms.genruntimeconfig.cache
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\obj\Debug\net5.0-windows\Forms.csproj.AssemblyReference.cache
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\bin\Debug\net5.0-windows\Libreria de clases.dll
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\bin\Debug\net5.0-windows\Libreria de clases.pdb
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\obj\Debug\net5.0-windows\Forms.csproj.CopyComplete

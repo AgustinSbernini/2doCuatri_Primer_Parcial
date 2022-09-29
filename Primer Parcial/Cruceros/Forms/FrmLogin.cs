@@ -20,6 +20,7 @@ namespace Forms
         public FrmLogin()
         {
             InitializeComponent();
+
             // Seteo de mensajes de ayuda al pasar el mouse por arriba de las cajas de texto o boton
             this.ttMensaje.SetToolTip(this.txtUsuario, "Ingrese el usuario designado en Readme");
             this.ttMensaje.SetToolTip(this.txtContraseña, "Ingrese la contraseña designada en Readme para su usuario");
@@ -31,9 +32,6 @@ namespace Forms
 
             // Verificador de login
             loginCorrecto = 1;
-
-            //Inicializo el frm_index
-            frm_index = new();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -45,10 +43,10 @@ namespace Forms
             if (loginCorrecto == 0)
             {
                 this.error.Clear();
-                MessageBox.Show("ESKERE VIEJA ESKERE");
-                frm_index.cargarUsuario(this.txtUsuario.Text);
+                //Inicializo el frm_index
+                frm_index = new(this.txtUsuario.Text);
                 frm_index.Show();
-                //this.Opacity = 0;
+                //this.Hide();
             }
             else
             {
