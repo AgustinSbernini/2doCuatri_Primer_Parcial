@@ -20,3 +20,4 @@ C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Crucero
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\bin\Debug\net5.0-windows\Libreria de clases.dll
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\bin\Debug\net5.0-windows\Libreria de clases.pdb
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\obj\Debug\net5.0-windows\Forms.csproj.CopyComplete
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\obj\Debug\net5.0-windows\Forms.FrmCrearViaje.resources

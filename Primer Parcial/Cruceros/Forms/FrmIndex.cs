@@ -13,8 +13,18 @@ namespace Forms
 {
     public partial class FrmIndex : Form
     {
-        Crucero crucero;
+        #region Declaracion de variables
+        FrmCrearViaje frmCrearViaje;
+
+        Crucero crucero1;
+        Crucero crucero2;
+        Crucero crucero3;
+        Crucero crucero4;
+        Crucero crucero5;
+        Crucero crucero6;
+        Crucero crucero7;
         List<Crucero> cruceros;
+
         Viaje viaje1;
         Viaje viaje2;
         Viaje viaje3;
@@ -22,92 +32,249 @@ namespace Forms
         Viaje viaje5;
         Viaje viaje6;
         List<Viaje> viajes;
+        public List<Viaje> Viajes { set { this.viajes = value; } }
+
+        Pasajero pasajero1;
+        Pasajero pasajero2;
+        Pasajero pasajero3;
+        Pasajero pasajero4;
+        Pasajero pasajero5;
+        List<Pasajero> listaPasajeros;
+
         DataTable tableViajes;
-        DataRow filaAux;
+        DataRow filaAuxViaje;
+        DataGridViewRow filaAuxCrucero;
+        DataGridViewRow filaAuxPasajero;
+
+        int index;
+        string matricula;
+        string fecha;
+        string[] matriculaFecha;
+        #endregion
         public FrmIndex()
         {
             InitializeComponent();
+
             tableViajes = new();
-            viajes = new();
+
             cruceros = new();
-            crucero = new("ABDW123", "La Nicole", 15);
-            cruceros.Add(crucero);
-            viaje1 = new(DateTime.Today, crucero, DestinosExtraregionales.Atenas_Grecia);
+            #region Instanciar cruceros
+            crucero1 = new("ABDW1423", "Braavos", 15);
+            cruceros.Add(crucero1);
+            crucero2 = new("NDWI0252", "Oros", 20, 2, 1, 0, 1, 500);
+            cruceros.Add(crucero2);
+            crucero3 = new("MLWQ4523", "Pentos", 23, 3, 1, 2, 1, 600);
+            cruceros.Add(crucero3);
+            crucero4 = new("ALWJ2351", "King Landing", 30, 4, 2, 2, 2, 1000);
+            cruceros.Add(crucero4);
+            crucero5 = new("LKWO9148", "Mantarys", 17, 1, 1, 1, 0, 400);
+            cruceros.Add(crucero5);
+            crucero6 = new("ZMWN2921", "Volantis", 19, 2, 0, 1, 0, 450);
+            cruceros.Add(crucero6);
+            crucero7 = new("BJUY7753", "Valyria", 22, 3, 2, 1, 1, 500);
+            cruceros.Add(crucero7);
+            #endregion
+
+            viajes = new();
+            #region Instanciar viajes
+            viaje1 = new(DateTime.Parse("27/09/2022"), crucero1, DestinosExtraregionales.Atenas_Grecia);
             viajes.Add(viaje1);
-            viaje2 = new(DateTime.Today, crucero, DestinosExtraregionales.Acapulco_Mexico);
+            viaje2 = new(DateTime.Parse("05/10/2022"), crucero2, DestinosExtraregionales.Acapulco_Mexico);
             viajes.Add(viaje2);
-            viaje3 = new(DateTime.Today, crucero, DestinosExtraregionales.La_Habana_Cuba);
+            viaje3 = new(DateTime.Parse("25/11/2022"), crucero3, DestinosExtraregionales.La1Habana_Cuba);
             viajes.Add(viaje3);
-            viaje4 = new(DateTime.Today, crucero, DestinosExtraregionales.Nueva_York_EEUU);
+            viaje4 = new(DateTime.Parse("05/10/2022"), crucero4, DestinosRegionales.Lima_Peru);
             viajes.Add(viaje4);
-            viaje5 = new(DateTime.Today, crucero, DestinosExtraregionales.Taipei_Taiwán); 
+            viaje5 = new(DateTime.Parse("15/11/2022"), crucero5, DestinosRegionales.Recife_Brasil); 
             viajes.Add(viaje5);
-            viaje6 = new(DateTime.Today, crucero, DestinosExtraregionales.Venecia_Italia);
+            viaje6 = new(DateTime.Parse("15/12/2022"), crucero1, DestinosRegionales.Rio1de1Janeiro_Brasil);
             viajes.Add(viaje6);
+            #endregion
+
+            listaPasajeros = new();
+            #region Instanciar pasajeros
+            pasajero1 = new(Clase.Premium, "Agustin", "Sbernini", 40377289, "ZZZ2551", "Argentina",
+                DateTime.Parse("18/07/1997"), DateTime.Parse("19/03/2024"), Sexo.Masculino, true, 2, 30);
+            listaPasajeros.Add(pasajero1);
+            pasajero2 = new(Clase.Turista, "Anibal", "Heredia", 39555844, "ZZZ551", "Brasil",
+                DateTime.Parse("19/06/1850"), DateTime.Parse("08/02/2023"), Sexo.Femenino, false, 1, 20);
+            listaPasajeros.Add(pasajero2);
+            pasajero3 = new(Clase.Turista, "Nani", "Reneiiitou", 25415421, "ZZZ3299", "Uruguay",
+                DateTime.Parse("03/05/2000"), DateTime.Parse("15/09/2025"), Sexo.Masculino, true, 0, 0);
+            listaPasajeros.Add(pasajero3);
+            pasajero4 = new(Clase.Premium, "p4TTT0", "Perez", 36584575, "ZZZ2929", "Chile",
+                DateTime.Parse("25/12/2004"), DateTime.Parse("25/01/2022"), Sexo.Femenino, false, 1, 10);
+            listaPasajeros.Add(pasajero4);
+            pasajero5 = new(Clase.Premium, "El Lui", "TuliCurra", 79665412, "ZZZ5923", "Peruano",
+                DateTime.Parse("01/01/2001"), DateTime.Parse("25/01/2022"), Sexo.Femenino, true, 2, 25);
+            listaPasajeros.Add(pasajero5);
+            #endregion
+
+            frmCrearViaje = new(cruceros, viajes);
+            AddOwnedForm(frmCrearViaje);
         }
         public FrmIndex(string usuarioIngresado) : this()
         {
+            // Rellena los labels con el Usuario recibido y la fecha de hoy
             this.lblFecha.Text = $"{DateTime.Today:d}";
             this.lblUsuario.Text = $"{usuarioIngresado}";
         }
         private void FrmIndex_Load(object sender, EventArgs e)
         {
+            // Crea las columna de la tabla de Viaje
             tableViajes.Columns.Add("Crucero");
             tableViajes.Columns.Add("Origen");
             tableViajes.Columns.Add("Destino");
-            tableViajes.Columns.Add("Hora de Partida");
-            tableViajes.Columns.Add("Precio Turista");
-            tableViajes.Columns.Add("Precio Premium");
-            
-            foreach(Viaje viaje in viajes)
+            tableViajes.Columns.Add("Dia Salida");
+            tableViajes.Columns.Add("Dia Llegada");
+            tableViajes.Columns.Add("PrecioTurista");
+            tableViajes.Columns.Add("PrecioPremium");
+
+            // Carga los viajes actuales a la tabla de viaje
+            CargarViajes();
+
+            // Agrega pasajeros a algunos viajes creados
+            this.viaje1 += listaPasajeros;
+            this.viaje2 += listaPasajeros;
+            this.viaje3 += listaPasajeros;
+            this.viaje1 += listaPasajeros;
+        }
+
+        private void dgvViajes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Recolecto la celda clickeada de la tabla de viajes, especificamente el primer indice donde
+            // se guarda la matricula y el cuarto indice donde se guarda la fecha de salida
+            // y recorro la lista de cruceros para buscar el match y la lista de viajes para buscar el match.
+            index = e.RowIndex;
+
+            // Si el indice es -1 significa que esta clickeando el header de la columna
+            if(index > -1)
             {
-                filaAux = tableViajes.NewRow();
+                matricula = dgvViajes.Rows[index].Cells[0].Value.ToString();
+                fecha = dgvViajes.Rows[index].Cells[3].Value.ToString();
 
-                filaAux[0] = viaje.Crucero.Matricula;
-                filaAux[1] = viaje.CiudadDePartida;
-                filaAux[2] = viaje.Destino;
-                filaAux[3] = viaje.FechaSalida;
-                filaAux[4] = viaje.CostoPasajeTurista;
-                filaAux[5] = viaje.CostoPasajePremium;
-
-                tableViajes.Rows.Add(filaAux);
+                matriculaFecha = new string[] { matricula, fecha };
             }
-
-            dgvViajes.DataSource = tableViajes;
-        }
-
-        private void btnHistorialViajes_Click(object sender, EventArgs e)
-        {
-             
-        }
-
-        private void dgvViajes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index = e.RowIndex;
-            string matricula = tableViajes.Rows[index][0].ToString();
-
+            
+            // Recorre la lista de cruceros hasta encontrar el crucero del viaje seleccionado
             foreach (Crucero crucero in cruceros)
             {
-                if(crucero == matricula)
+                if (crucero == matricula)
                 {
-                    DataGridViewRow filaAux = new();
+                    // Recorre la lista de viajes hasta encontrar el viaje seleccionado
+                    foreach (Viaje viaje in viajes)
+                    {
+                        if(viaje == matriculaFecha)
+                        {
+                            // Limpia la celda de crucero por si tiene datos cargados anteriormente
+                            // Crea una fila y rellena las columna con los datos del crucero del viaje seleccionado
+                            // Agrega la fila al DataGridView de Crucero
+                            this.dgvCrucero.Rows.Clear();
+                            filaAuxCrucero = new();
 
-                    filaAux.CreateCells(dgvCrucero);
+                            filaAuxCrucero.CreateCells(this.dgvCrucero);
 
-                    filaAux.Cells[0].Value = $"{crucero.Nombre} - {crucero.Matricula}";
-                    filaAux.Cells[1].Value = $"{crucero.CamarotesDisponibles}/{crucero.CamarotesTotales}";
-                    filaAux.Cells[2].Value = $"{crucero.Comedores}";
-                    filaAux.Cells[3].Value = $"{crucero.Gimnasio}";
-                    filaAux.Cells[4].Value = $"{crucero.Piscinia}";
-                    filaAux.Cells[5].Value = $"{crucero.Casino}";
-                    filaAux.Cells[6].Value = $"{crucero.Bodega}";
-                    filaAux.Cells[7].Value = $"Nada";
+                            filaAuxCrucero.Cells[0].Value = $"{crucero.Nombre} - {crucero.Matricula}";
+                            filaAuxCrucero.Cells[1].Value = $"{viaje.CamarotesTurista}/{crucero.CamarotesTurista}";
+                            filaAuxCrucero.Cells[2].Value = $"{viaje.CamarotesPremium}/{crucero.CamarotesPremium}";
+                            filaAuxCrucero.Cells[3].Value = $"{crucero.Comedores}";
+                            filaAuxCrucero.Cells[4].Value = $"{crucero.Gimnasio}";
+                            filaAuxCrucero.Cells[5].Value = $"{crucero.Piscinia}";
+                            filaAuxCrucero.Cells[6].Value = $"{crucero.Casino}";
+                            filaAuxCrucero.Cells[7].Value = $"{viaje.Bodega}/{crucero.Bodega}";
 
-                    dgvCrucero.Rows.Add(filaAux);
+                            this.dgvCrucero.Rows.Add(filaAuxCrucero);
 
-                    break;
+                            // Limpio la lista de pasajeros y muestro los pasajeros del viaje seleccionado
+
+                            this.dgvPasajero.Rows.Clear();
+
+                            if(viaje.ListaPasajeros.Count == 0)
+                            {
+                                // En caso de no haber pasajeros en la lista se muestra un mensaje aclarandolo
+                                filaAuxPasajero = new();
+                                filaAuxPasajero.CreateCells(this.dgvPasajero);
+
+                                filaAuxPasajero.Cells[0].Value = "Viaje sin pasajeros";
+
+                                this.dgvPasajero.Rows.Add(filaAuxPasajero);
+                            }
+                            else
+                            {
+                                // Recorre la lista de pasajeros que tiene el viaje seleccionado
+                                // Por cada uno crea una fila y rellena cada columna con todos sus datos
+                                // Por ultimo agrega la fila al DataGridView de Pasajero
+                                for (int i = 0; i < viaje.ListaPasajeros.Count; i++)
+                                {
+                                    filaAuxPasajero = new();
+                                    filaAuxPasajero.CreateCells(this.dgvPasajero);
+
+                                    filaAuxPasajero.Cells[0].Value = $"{viaje.ListaPasajeros[i].Apellido}, {viaje.ListaPasajeros[i].Nombre}";
+                                    filaAuxPasajero.Cells[1].Value = $"{viaje.ListaPasajeros[i].Dni}";
+                                    filaAuxPasajero.Cells[2].Value = $"{viaje.ListaPasajeros[i].Sexo}";
+                                    filaAuxPasajero.Cells[3].Value = $"{viaje.ListaPasajeros[i].Edad}";
+                                    filaAuxPasajero.Cells[4].Value = $"{viaje.ListaPasajeros[i].Equipaje.BolsoDeMano}";
+                                    filaAuxPasajero.Cells[5].Value = $"{viaje.ListaPasajeros[i].Equipaje.CantidadValijas} - {viaje.ListaPasajeros[i].Equipaje.PesoTotalValijas}";
+
+                                    this.dgvPasajero.Rows.Add(filaAuxPasajero);
+                                }
+                            }
+
+                            break;
+                        }
+                    }
                 }
             }
+        }
+
+        private void btnCrearViaje_Click(object sender, EventArgs e)
+        {
+            // Abre el form donde se podra crear un viaje nuevo, si todo es correcto se agrega a la tabla
+            if(frmCrearViaje.ShowDialog() == DialogResult.OK)
+            {
+                CargarViajes();
+            }
+        }
+        private void btnHistorialViajes_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void FrmIndex_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Mensaje de advertencia cuando se intenta cerrar el formulario. si marca Yes se cierra, si marca No se cancela
+            if (MessageBox.Show("Seguro desea cerrar el programa?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+            }
+        }
+
+        /// <summary>
+        /// Recorre todos los viajes que hay cargados en la lista 
+        /// Crea tantas filas de la tabla de viajes como viajes haya cargados 
+        /// rellena sus campos con los datos de cada viaje y agrega la tabla hecha al DataGrivView de Viajes
+        /// </summary>
+        private void CargarViajes()
+        {
+            foreach (Viaje viaje in viajes)
+            {
+                filaAuxViaje = tableViajes.NewRow();
+
+                filaAuxViaje[0] = viaje.Crucero.Matricula;
+                filaAuxViaje[1] = viaje.CiudadDePartida;
+                filaAuxViaje[2] = viaje.Destino.Replace("_", ", ").Replace("1", " ");
+                filaAuxViaje[3] = $"{viaje.FechaSalida:d}";
+                filaAuxViaje[4] = $"{viaje.FechaLlegada:d}";
+                filaAuxViaje[5] = viaje.CostoPasajeTurista;
+                filaAuxViaje[6] = viaje.CostoPasajePremium;
+
+                tableViajes.Rows.Add(filaAuxViaje);
+            }
+
+            this.dgvViajes.DataSource = tableViajes;
         }
     }
 }

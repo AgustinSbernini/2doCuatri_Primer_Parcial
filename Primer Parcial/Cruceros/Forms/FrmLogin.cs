@@ -29,7 +29,8 @@ namespace Forms
             // Creacion de usuarios y contraseñas
             usuarios = new string[] { "Maximiliano", "Facundo", "Felipe", "Agustin" };
             contraseñas = new string[] { "maxi123", "facu123", "feli123", "agus123" };
-
+            this.txtUsuario.Text = "Agustin";
+            this.txtContraseña.Text = "agus123";
             // Verificador de login
             loginCorrecto = 1;
         }
@@ -43,10 +44,13 @@ namespace Forms
             if (loginCorrecto == 0)
             {
                 this.error.Clear();
-                //Inicializo el frm_index
+                //Inicializo el frmIndex y escondo el frmLogin
                 frm_index = new(this.txtUsuario.Text);
-                frm_index.Show();
-                //this.Hide();
+                this.Hide();
+                if(frm_index.ShowDialog() == DialogResult.OK)
+                {
+                    this.Close();
+                }
             }
             else
             {

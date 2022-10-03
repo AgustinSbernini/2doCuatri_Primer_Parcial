@@ -7,55 +7,54 @@ namespace Libreria_de_clases
     {
         private string matricula; //alfanumerico 8 digitos
         private string nombre;
-        private int cantidadCamarotesTotales;
-        private int cantidadCamarotesDisponibles;
+        private int cantidadCamarotesTurista;
+        private int cantidadCamarotesPremium;
         private int cantidadComedores;
         private int cantidadGimnasios;
         private int cantidadPiscinas;
         private int cantidadCasinos;
-        private int cantidadBodegas;
-        
+        private int pesoBodega;
+
+        private const double porcentajeCamarotesTurista = 0.65;
+        private const double porcentajeCamarotesPremium = 0.35;
+
         private Crucero()
         {
             this.cantidadComedores = 1;
             this.cantidadGimnasios = 0;
             this.cantidadPiscinas = 0;
             this.cantidadCasinos = 0;
-            this.cantidadBodegas = 15;
+            this.pesoBodega = 350;
         }
 
         public Crucero(string matricula, string nombre, int cantidadCamarotes) : this()
         {
             this.matricula = matricula;
             this.nombre = nombre;
-            this.cantidadCamarotesTotales = cantidadCamarotes;
-            this.cantidadCamarotesDisponibles = cantidadCamarotes;
+            this.cantidadCamarotesTurista = (int)(Math.Round(cantidadCamarotes * porcentajeCamarotesTurista, MidpointRounding.AwayFromZero));
+            this.cantidadCamarotesPremium = (int) (Math.Round(cantidadCamarotes * porcentajeCamarotesPremium, MidpointRounding.ToZero));
         }
 
         public Crucero(string matricula, string nombre, int cantidadCamarotes, int cantidadComedores, int cantidadGimnasios,
-            int cantidadPiscinas, int cantidadCasinos, int cantidadBodegas) : this(matricula, nombre, cantidadCamarotes)
+            int cantidadPiscinas, int cantidadCasinos, int pesoBodega) : this(matricula, nombre, cantidadCamarotes)
         {
             this.cantidadComedores = cantidadComedores;
             this.cantidadGimnasios = cantidadGimnasios;
             this.cantidadPiscinas = cantidadPiscinas;
             this.cantidadCasinos = cantidadCasinos;
-            this.cantidadBodegas = cantidadBodegas;
+            this.pesoBodega = pesoBodega;
         }
 
 
         public string Matricula { get { return this.matricula; } }
         public string Nombre { get { return this.nombre; } }
-        public int CamarotesDisponibles 
-        { 
-            get { return this.cantidadCamarotesDisponibles; }
-            set { this.cantidadCamarotesDisponibles = value; } 
-        }
-        public int CamarotesTotales { get { return this.cantidadCamarotesTotales; } }
+        public int CamarotesPremium { get { return this.cantidadCamarotesPremium; } }
+        public int CamarotesTurista { get { return this.cantidadCamarotesTurista; } }
         public int Comedores { get { return this.cantidadComedores; } }
         public int Gimnasio { get { return this.cantidadGimnasios; } }
         public int Piscinia { get { return this.cantidadPiscinas; } }
         public int Casino { get { return this.cantidadCasinos; } }
-        public int Bodega { get { return this.cantidadBodegas; } }
+        public int Bodega { get { return this.pesoBodega; } }
 
 
 
@@ -80,11 +79,32 @@ namespace Libreria_de_clases
             StringBuilder retorno = new();
 
             retorno.Append($"{this.nombre} - {this.matricula}");
-            retorno.Append($"{this.cantidadCamarotesTotales} - {this.cantidadComedores}");
+            retorno.Append($"{this.cantidadCamarotesTurista} {this.cantidadCamarotesPremium} - {this.cantidadComedores}");
             retorno.Append($"{this.cantidadGimnasios} - {this.cantidadPiscinas}");
-            retorno.Append($"{this.cantidadCasinos} - {this.cantidadBodegas}");
+            retorno.Append($"{this.cantidadCasinos} - {this.pesoBodega}");
 
             return retorno.ToString();
         }
+
+        public override bool Equals(object obj)
+        {
+            bool retorno = false;
+
+            if(obj is not null)
+            {
+                if(obj is Crucero)
+                {
+                    retorno = this == obj as Crucero;
+                }
+            }
+
+            return retorno;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
+
 }
