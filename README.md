@@ -50,3 +50,10 @@ General, luego involucrarme en los detalles mas precisos.
 <p class="has-line-data" data-line-start="32" data-line-end="33"><em>Tema Nueve:</em> Polimorfismo se utilizó a la hora de sobreescribir los métodos estáticos derivados de object, principalmente ToString y en menor medida Equals (utilizado internamente por la función Contains). Intente usar Abstract para la herencia de formularios pero me contrajo más problemas que soluciones, por lo que terminé decidiendo no utilizar.</p>
 </li>
 </ul>
+<hr>
+<h3 class="code-line" data-line-start=34 data-line-end=35 ><a id="Los_usuarios_y_contraseas_disponibles_para_logear_son_34"></a>Los usuarios y contraseñas disponibles para logear son:</h3>
+<h5 class="code-line" data-line-start=35 data-line-end=36 ><a id="Usuario_Maximiliano____Password_maxi123_35"></a>Usuario: Maximiliano  -  Password: maxi123</h5>
+<h5 class="code-line" data-line-start=36 data-line-end=37 ><a id="Usuario_Facundo____Password_facu123_36"></a>Usuario: Facundo  -  Password: facu123</h5>
+<h5 class="code-line" data-line-start=37 data-line-end=38 ><a id="Usuario_Felipe____Password_feli123_37"></a>Usuario: Felipe  -  Password: feli123</h5>
+<h5 class="code-line" data-line-start=38 data-line-end=39 ><a id="Usuario_Agustin____Password_agus123_38"></a>Usuario: Agustin  -  Password: agus123</h5>
+<hr>
