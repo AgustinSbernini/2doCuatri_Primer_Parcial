@@ -238,17 +238,15 @@ namespace Forms
 
         private void rbTurista_CheckedChanged(object sender, EventArgs e)
         {
-            // Setea los valores maximo de la cantidad de valijas y el peso total que puede llevar
+            // Setea los valores maximo de la cantidad de valijas que puede llevar
             // Un pasajero dependiendo de la clase que desee comprar
             if(this.rbTurista.Checked)
             {
-                this.nudCantidadValijas.Maximum = 1;
-                this.nudPesoValijas.Maximum = 25;
+                this.nudCantidadValijas.Maximum = 1;   
             }
             else
             {
-                this.nudCantidadValijas.Maximum = 2;
-                this.nudPesoValijas.Maximum = 50;
+                this.nudCantidadValijas.Maximum = 2;      
             }
         }
 
@@ -369,6 +367,28 @@ namespace Forms
                     e.Cancel = true;
                 }
             }
+        }
+
+        private void nudCantidadValijas_ValueChanged(object sender, EventArgs e)
+        {
+            // Si el pasajero decide no llevar valijas el peso maximo deberia de ser 0
+            // Si elije llevar una sola valija el peso maximo es 25
+            // Si elije llevar dos valijas el peso maximo es 50
+            if(this.nudCantidadValijas.Value == 0)
+            {
+                this.nudPesoValijas.Maximum = 0;
+            }
+            else
+            {
+                if (this.nudCantidadValijas.Value == 1)
+                {
+                    this.nudPesoValijas.Maximum = 25;
+                }
+                else
+                {
+                    this.nudPesoValijas.Maximum = 50;
+                }
+            }  
         }
     }
 }

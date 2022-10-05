@@ -567,6 +567,7 @@ namespace Forms
             this.nudCantidadValijas.Name = "nudCantidadValijas";
             this.nudCantidadValijas.Size = new System.Drawing.Size(46, 28);
             this.nudCantidadValijas.TabIndex = 21;
+            this.nudCantidadValijas.ValueChanged += new System.EventHandler(this.nudCantidadValijas_ValueChanged);
             // 
             // cbBolsoDeMano
             // 
