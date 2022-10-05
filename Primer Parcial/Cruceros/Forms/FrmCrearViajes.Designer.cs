@@ -51,9 +51,10 @@ namespace Forms
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbCruceros);
+            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(12, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(235, 71);
+            this.groupBox1.Size = new System.Drawing.Size(186, 71);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cruceros";
@@ -72,6 +73,7 @@ namespace Forms
             // 
             this.groupBox2.Controls.Add(this.cbFechaLlegada);
             this.groupBox2.Controls.Add(this.cbFechaInicio);
+            this.groupBox2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(12, 113);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(260, 71);
@@ -102,6 +104,7 @@ namespace Forms
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dtpFechaSalida);
+            this.groupBox3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.Location = new System.Drawing.Point(12, 190);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(186, 71);
@@ -116,7 +119,7 @@ namespace Forms
             this.dtpFechaSalida.MaxDate = new System.DateTime(2029, 12, 31, 0, 0, 0, 0);
             this.dtpFechaSalida.MinDate = new System.DateTime(2022, 10, 4, 0, 0, 0, 0);
             this.dtpFechaSalida.Name = "dtpFechaSalida";
-            this.dtpFechaSalida.Size = new System.Drawing.Size(127, 27);
+            this.dtpFechaSalida.Size = new System.Drawing.Size(127, 28);
             this.dtpFechaSalida.TabIndex = 0;
             this.dtpFechaSalida.CloseUp += new System.EventHandler(this.dtpFechaSalida_CloseUp);
             // 
@@ -125,6 +128,7 @@ namespace Forms
             this.groupBox4.Controls.Add(this.rbExtraRegionales);
             this.groupBox4.Controls.Add(this.rbRegionales);
             this.groupBox4.Controls.Add(this.cbDestinos);
+            this.groupBox4.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox4.Location = new System.Drawing.Point(287, 24);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(237, 160);
@@ -137,7 +141,7 @@ namespace Forms
             this.rbExtraRegionales.AutoSize = true;
             this.rbExtraRegionales.Location = new System.Drawing.Point(20, 57);
             this.rbExtraRegionales.Name = "rbExtraRegionales";
-            this.rbExtraRegionales.Size = new System.Drawing.Size(140, 24);
+            this.rbExtraRegionales.Size = new System.Drawing.Size(146, 24);
             this.rbExtraRegionales.TabIndex = 2;
             this.rbExtraRegionales.TabStop = true;
             this.rbExtraRegionales.Text = "Extra Regionales";
@@ -149,7 +153,7 @@ namespace Forms
             this.rbRegionales.AutoSize = true;
             this.rbRegionales.Location = new System.Drawing.Point(20, 27);
             this.rbRegionales.Name = "rbRegionales";
-            this.rbRegionales.Size = new System.Drawing.Size(103, 24);
+            this.rbRegionales.Size = new System.Drawing.Size(102, 24);
             this.rbRegionales.TabIndex = 1;
             this.rbRegionales.TabStop = true;
             this.rbRegionales.Text = "Regionales";
@@ -167,6 +171,7 @@ namespace Forms
             // 
             // btnCrearViaje
             // 
+            this.btnCrearViaje.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCrearViaje.Location = new System.Drawing.Point(542, 50);
             this.btnCrearViaje.Name = "btnCrearViaje";
             this.btnCrearViaje.Size = new System.Drawing.Size(94, 70);
@@ -177,6 +182,7 @@ namespace Forms
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCancelar.Location = new System.Drawing.Point(542, 153);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(94, 70);

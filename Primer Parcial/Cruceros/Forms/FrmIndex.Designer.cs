@@ -62,6 +62,9 @@ namespace Forms
             this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BolsoMano = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ValijaPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCrucero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPasajero)).BeginInit();
@@ -331,7 +334,7 @@ namespace Forms
             this.BolsoMano,
             this.ValijaPeso});
             this.dgvPasajero.GridColor = System.Drawing.Color.Black;
-            this.dgvPasajero.Location = new System.Drawing.Point(47, 378);
+            this.dgvPasajero.Location = new System.Drawing.Point(47, 402);
             this.dgvPasajero.MultiSelect = false;
             this.dgvPasajero.Name = "dgvPasajero";
             this.dgvPasajero.ReadOnly = true;
@@ -397,11 +400,44 @@ namespace Forms
             this.ValijaPeso.Name = "ValijaPeso";
             this.ValijaPeso.ReadOnly = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(443, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 29);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Viajes";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(433, 263);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 29);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Cruceros";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(433, 370);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 29);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Pasajeros";
+            // 
             // FrmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 703);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPasajero);
             this.Controls.Add(this.dgvCrucero);
             this.Controls.Add(this.dgvViajes);
@@ -450,5 +486,8 @@ namespace Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Piscina;
         private System.Windows.Forms.DataGridViewTextBoxColumn Casino;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bodega;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

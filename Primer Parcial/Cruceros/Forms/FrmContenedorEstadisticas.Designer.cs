@@ -53,7 +53,7 @@ namespace Forms
             // 
             this.btnPasajeros.FlatAppearance.BorderSize = 3;
             this.btnPasajeros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPasajeros.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPasajeros.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPasajeros.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnPasajeros.Location = new System.Drawing.Point(420, 0);
             this.btnPasajeros.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
@@ -68,7 +68,7 @@ namespace Forms
             // 
             this.btnCruceros.FlatAppearance.BorderSize = 3;
             this.btnCruceros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCruceros.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCruceros.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCruceros.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCruceros.Location = new System.Drawing.Point(210, 0);
             this.btnCruceros.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
@@ -84,7 +84,7 @@ namespace Forms
             this.btnDestino.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnDestino.FlatAppearance.BorderSize = 3;
             this.btnDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDestino.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDestino.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDestino.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDestino.Location = new System.Drawing.Point(0, 0);
             this.btnDestino.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
@@ -111,6 +111,9 @@ namespace Forms
             this.ClientSize = new System.Drawing.Size(632, 453);
             this.Controls.Add(this.panelEstadistica);
             this.Controls.Add(this.panelBotones);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(650, 500);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(650, 500);
             this.Name = "FrmContenedorEstadisticas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
