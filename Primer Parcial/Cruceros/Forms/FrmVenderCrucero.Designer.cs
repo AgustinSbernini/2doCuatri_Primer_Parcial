@@ -756,7 +756,7 @@ namespace Forms
             this.MinimumSize = new System.Drawing.Size(968, 582);
             this.Name = "FrmVenderCrucero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmVenderCrucero";
+            this.Text = "Cruceros AguasVivas - Vender Crucero";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmVenderCrucero_FormClosing);
             this.Load += new System.EventHandler(this.FrmVenderCrucero_Load);
             this.groupBox5.ResumeLayout(false);

@@ -116,7 +116,7 @@ namespace Forms
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Crucero - Login Vendedor";
+            this.Text = "Crucero AguasVivas - Login Vendedor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmLogin_FormClosing);
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();

@@ -114,7 +114,7 @@ namespace Forms
             this.MinimumSize = new System.Drawing.Size(650, 500);
             this.Name = "FrmContenedorEstadisticas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ContenedorEstadisticas";
+            this.Text = "Cruceros AguasVivas - Estadisticas";
             this.panelBotones.ResumeLayout(false);
             this.ResumeLayout(false);
 

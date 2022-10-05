@@ -414,7 +414,7 @@ namespace Forms
             this.MinimumSize = new System.Drawing.Size(1250, 750);
             this.Name = "FrmIndex";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cruceros - Index";
+            this.Text = "Cruceros AguasVivas - Index";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmIndex_FormClosing);
             this.Load += new System.EventHandler(this.FrmIndex_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvViajes)).EndInit();

@@ -182,7 +182,7 @@ namespace Forms
             this.Controls.Add(this.txtViajes);
             this.Name = "FrmInfoDetallada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmInfoDetallada";
+            this.Text = "Cruceros AguasVivas - Informacion Detallada";
             this.Load += new System.EventHandler(this.FrmInfoDetallada_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

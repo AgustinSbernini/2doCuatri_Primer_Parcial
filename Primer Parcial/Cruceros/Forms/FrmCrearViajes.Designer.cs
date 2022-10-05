@@ -199,7 +199,7 @@ namespace Forms
             this.MinimumSize = new System.Drawing.Size(680, 330);
             this.Name = "FrmCrearViajes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCrearViajes";
+            this.Text = "Cruceros AguasVivas - CrearViajes";
             this.Load += new System.EventHandler(this.FrmBaseCrearViajeVenderCrucero_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
