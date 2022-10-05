@@ -28,3 +28,4 @@ C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Crucero
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\obj\Debug\net5.0-windows\Forms.FrmContenedorEstadisticas.resources
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\obj\Debug\net5.0-windows\Forms.FrmEstadisticaCruceros.resources
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\obj\Debug\net5.0-windows\Forms.FrmEstadisticasPasajeros.resources
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Forms\obj\Debug\net5.0-windows\Forms.Properties.Resources.resources

@@ -109,13 +109,15 @@ namespace Forms
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.BackColor = System.Drawing.Color.LimeGreen;
             this.groupBox5.Controls.Add(this.nudCantidadComedores);
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Controls.Add(this.checkCasino);
             this.groupBox5.Controls.Add(this.checkPiscina);
             this.groupBox5.Controls.Add(this.checkGimnasio);
             this.groupBox5.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox5.Location = new System.Drawing.Point(533, 18);
+            this.groupBox5.Location = new System.Drawing.Point(564, 18);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(287, 144);
             this.groupBox5.TabIndex = 6;
@@ -174,12 +176,14 @@ namespace Forms
             // 
             // groupBox6
             // 
+            this.groupBox6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.groupBox6.BackColor = System.Drawing.Color.LimeGreen;
             this.groupBox6.Controls.Add(this.txtCamarotesPremium);
             this.groupBox6.Controls.Add(this.txtCamarotesTurista);
             this.groupBox6.Controls.Add(this.label3);
             this.groupBox6.Controls.Add(this.label2);
             this.groupBox6.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox6.Location = new System.Drawing.Point(14, 180);
+            this.groupBox6.Location = new System.Drawing.Point(14, 197);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(264, 99);
             this.groupBox6.TabIndex = 7;
@@ -222,6 +226,8 @@ namespace Forms
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox7.BackColor = System.Drawing.Color.LimeGreen;
             this.groupBox7.Controls.Add(this.txtFinalPremium);
             this.groupBox7.Controls.Add(this.txtFinalTurista);
             this.groupBox7.Controls.Add(this.label8);
@@ -234,7 +240,7 @@ namespace Forms
             this.groupBox7.Controls.Add(this.label5);
             this.groupBox7.Controls.Add(this.label4);
             this.groupBox7.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox7.Location = new System.Drawing.Point(291, 168);
+            this.groupBox7.Location = new System.Drawing.Point(306, 185);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(310, 156);
             this.groupBox7.TabIndex = 8;
@@ -336,9 +342,11 @@ namespace Forms
             // 
             // groupBox8
             // 
+            this.groupBox8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBox8.BackColor = System.Drawing.Color.LimeGreen;
             this.groupBox8.Controls.Add(this.txtBodega);
             this.groupBox8.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox8.Location = new System.Drawing.Point(634, 180);
+            this.groupBox8.Location = new System.Drawing.Point(665, 197);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(155, 69);
             this.groupBox8.TabIndex = 9;
@@ -355,6 +363,8 @@ namespace Forms
             // 
             // groupBox9
             // 
+            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox9.BackColor = System.Drawing.Color.Turquoise;
             this.groupBox9.Controls.Add(this.dtpFechaNacimientoPasajero);
             this.groupBox9.Controls.Add(this.dtpFechaVencimientoPasajero);
             this.groupBox9.Controls.Add(this.txtDNIPasajero);
@@ -372,7 +382,7 @@ namespace Forms
             this.groupBox9.Controls.Add(this.txtApellidoPasajero);
             this.groupBox9.Controls.Add(this.txtNombrePasajero);
             this.groupBox9.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox9.Location = new System.Drawing.Point(14, 328);
+            this.groupBox9.Location = new System.Drawing.Point(14, 361);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(589, 196);
             this.groupBox9.TabIndex = 10;
@@ -528,6 +538,8 @@ namespace Forms
             // 
             // groupBox10
             // 
+            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox10.BackColor = System.Drawing.Color.Turquoise;
             this.groupBox10.Controls.Add(this.nudPesoValijas);
             this.groupBox10.Controls.Add(this.nudCantidadValijas);
             this.groupBox10.Controls.Add(this.cbBolsoDeMano);
@@ -535,7 +547,7 @@ namespace Forms
             this.groupBox10.Controls.Add(this.label18);
             this.groupBox10.Controls.Add(this.label17);
             this.groupBox10.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox10.Location = new System.Drawing.Point(623, 373);
+            this.groupBox10.Location = new System.Drawing.Point(654, 406);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(264, 144);
             this.groupBox10.TabIndex = 11;
@@ -594,6 +606,7 @@ namespace Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.LimeGreen;
             this.groupBox1.Controls.Add(this.cbCruceros);
             this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(14, 18);
@@ -615,6 +628,7 @@ namespace Forms
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.LimeGreen;
             this.groupBox2.Controls.Add(this.cbFechaLlegada);
             this.groupBox2.Controls.Add(this.cbFechaInicio);
             this.groupBox2.Location = new System.Drawing.Point(14, 97);
@@ -646,13 +660,16 @@ namespace Forms
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.BackColor = System.Drawing.Color.LimeGreen;
             this.groupBox3.Controls.Add(this.rbExtraRegionales);
             this.groupBox3.Controls.Add(this.rbRegionales);
             this.groupBox3.Controls.Add(this.cbDestinos);
             this.groupBox3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.Location = new System.Drawing.Point(270, 18);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(248, 141);
+            this.groupBox3.Size = new System.Drawing.Size(279, 141);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Cruceros Disponibles";
@@ -692,10 +709,12 @@ namespace Forms
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.BackColor = System.Drawing.Color.Turquoise;
             this.groupBox4.Controls.Add(this.rbPremium);
             this.groupBox4.Controls.Add(this.rbTurista);
             this.groupBox4.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBox4.Location = new System.Drawing.Point(634, 272);
+            this.groupBox4.Location = new System.Drawing.Point(665, 305);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(232, 95);
             this.groupBox4.TabIndex = 19;
@@ -727,31 +746,38 @@ namespace Forms
             // 
             // btnVenderCrucero
             // 
+            this.btnVenderCrucero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVenderCrucero.BackColor = System.Drawing.Color.Black;
             this.btnVenderCrucero.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnVenderCrucero.Location = new System.Drawing.Point(835, 46);
+            this.btnVenderCrucero.ForeColor = System.Drawing.Color.White;
+            this.btnVenderCrucero.Location = new System.Drawing.Point(866, 46);
             this.btnVenderCrucero.Name = "btnVenderCrucero";
             this.btnVenderCrucero.Size = new System.Drawing.Size(91, 88);
             this.btnVenderCrucero.TabIndex = 20;
             this.btnVenderCrucero.Text = "Vender Crucero";
-            this.btnVenderCrucero.UseVisualStyleBackColor = true;
+            this.btnVenderCrucero.UseVisualStyleBackColor = false;
             this.btnVenderCrucero.Click += new System.EventHandler(this.btnVenderCrucero_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.BackColor = System.Drawing.Color.Black;
             this.btnCancelar.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCancelar.Location = new System.Drawing.Point(835, 157);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(866, 157);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(91, 88);
             this.btnCancelar.TabIndex = 21;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FrmVenderCrucero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 535);
+            this.BackColor = System.Drawing.Color.ForestGreen;
+            this.ClientSize = new System.Drawing.Size(981, 568);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnVenderCrucero);
             this.Controls.Add(this.groupBox4);
@@ -764,7 +790,7 @@ namespace Forms
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
-            this.MinimumSize = new System.Drawing.Size(968, 582);
+            this.MinimumSize = new System.Drawing.Size(999, 615);
             this.Name = "FrmVenderCrucero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cruceros AguasVivas - Vender Crucero";

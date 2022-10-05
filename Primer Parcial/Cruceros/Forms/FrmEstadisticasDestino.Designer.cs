@@ -31,10 +31,6 @@ namespace Forms
         {
             this.SuspendLayout();
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Location = new System.Drawing.Point(121, 25);
-            // 
             // FrmEstadisticasDestino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);

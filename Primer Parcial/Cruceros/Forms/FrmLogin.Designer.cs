@@ -30,6 +30,7 @@ namespace Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblContraseña = new System.Windows.Forms.Label();
@@ -42,12 +43,11 @@ namespace Forms
             // 
             // lblUsuario
             // 
-            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.White;
+            this.lblUsuario.BackColor = System.Drawing.Color.Black;
             this.lblUsuario.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
             this.lblUsuario.Location = new System.Drawing.Point(96, 62);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(90, 28);
@@ -56,7 +56,10 @@ namespace Forms
             // 
             // txtUsuario
             // 
+            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUsuario.BackColor = System.Drawing.Color.Black;
             this.txtUsuario.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtUsuario.ForeColor = System.Drawing.Color.White;
             this.txtUsuario.Location = new System.Drawing.Point(310, 59);
             this.txtUsuario.MaxLength = 13;
             this.txtUsuario.Name = "txtUsuario";
@@ -65,12 +68,11 @@ namespace Forms
             // 
             // lblContraseña
             // 
-            this.lblContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.BackColor = System.Drawing.Color.White;
+            this.lblContraseña.BackColor = System.Drawing.Color.Black;
             this.lblContraseña.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblContraseña.ForeColor = System.Drawing.Color.White;
             this.lblContraseña.Location = new System.Drawing.Point(96, 152);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(120, 28);
@@ -79,7 +81,10 @@ namespace Forms
             // 
             // txtContraseña
             // 
+            this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtContraseña.BackColor = System.Drawing.Color.Black;
             this.txtContraseña.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtContraseña.ForeColor = System.Drawing.Color.White;
             this.txtContraseña.Location = new System.Drawing.Point(310, 149);
             this.txtContraseña.MaxLength = 13;
             this.txtContraseña.Name = "txtContraseña";
@@ -89,13 +94,16 @@ namespace Forms
             // 
             // btnLogin
             // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLogin.BackColor = System.Drawing.Color.Black;
             this.btnLogin.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(368, 243);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(100, 44);
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // error
@@ -107,6 +115,8 @@ namespace Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(582, 353);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtContraseña);

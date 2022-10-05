@@ -50,6 +50,8 @@ namespace Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox1.Controls.Add(this.cbCruceros);
             this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(12, 24);
@@ -71,6 +73,8 @@ namespace Forms
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox2.Controls.Add(this.cbFechaLlegada);
             this.groupBox2.Controls.Add(this.cbFechaInicio);
             this.groupBox2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -103,6 +107,8 @@ namespace Forms
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox3.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox3.Controls.Add(this.dtpFechaSalida);
             this.groupBox3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.Location = new System.Drawing.Point(12, 190);
@@ -125,6 +131,8 @@ namespace Forms
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox4.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox4.Controls.Add(this.rbExtraRegionales);
             this.groupBox4.Controls.Add(this.rbRegionales);
             this.groupBox4.Controls.Add(this.cbDestinos);
@@ -171,30 +179,37 @@ namespace Forms
             // 
             // btnCrearViaje
             // 
+            this.btnCrearViaje.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCrearViaje.BackColor = System.Drawing.Color.Black;
             this.btnCrearViaje.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCrearViaje.ForeColor = System.Drawing.Color.White;
             this.btnCrearViaje.Location = new System.Drawing.Point(542, 50);
             this.btnCrearViaje.Name = "btnCrearViaje";
             this.btnCrearViaje.Size = new System.Drawing.Size(94, 70);
             this.btnCrearViaje.TabIndex = 2;
             this.btnCrearViaje.Text = "Crear Viaje";
-            this.btnCrearViaje.UseVisualStyleBackColor = true;
+            this.btnCrearViaje.UseVisualStyleBackColor = false;
             this.btnCrearViaje.Click += new System.EventHandler(this.btnCrearViaje_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancelar.BackColor = System.Drawing.Color.Black;
             this.btnCancelar.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(542, 153);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(94, 70);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FrmCrearViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(662, 283);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCrearViaje);
