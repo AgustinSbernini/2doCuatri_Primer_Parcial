@@ -310,10 +310,11 @@ namespace Forms
                 // Valida de que se haya ingresado un nombre, se haya ingresado un apellido, se haya ingresado una nacionalidad
                 // Se haya seleccionado un sexo, que el pasaporte y el dni este escritos por completo,
                 // Que el peso del equipaje no supere a la capacidad maxima de la bodega y que haya espacio para un pasajero nuevo
+                // O que el barco ya este viajando
                 if(nombrePasajero.Length == 0 || apellidoPasajero.Length == 0 || nacionalidadPasajero.Length == 0 || 
                     this.cbSexoPasajero.SelectedIndex == -1 || this.txtPasaportePasajero.TextLength != this.txtPasaportePasajero.MaxLength
                     || this.txtDNIPasajero.TextLength != this.txtDNIPasajero.MaxLength || viajeSeleccionado.Bodega < this.nudPesoValijas.Value
-                    || !camaroteDisponiblePasajero)
+                    || !camaroteDisponiblePasajero || (DateTime)this.cbFechaInicio.SelectedItem < DateTime.Today)
                 {
                     // Si falta algun dato salta un mensaje de error
                     MessageBox.Show("Al menos uno de los datos ingresados es incorrecto, verifique de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -185,10 +185,25 @@ namespace Forms
                     filaAuxCrucero.Cells[6].Value = $"{viaje.Crucero.Casino}";
                     filaAuxCrucero.Cells[7].Value = $"{viaje.Bodega}/{viaje.Crucero.Bodega}";
 
+                    // Verifica si el crucero ya salió o la bodega esta vacia o ambos camarotes se encuentran sin espacio
+                    // y pinta de color rojo el crucero para advertir del estado
+                    if(viaje.FechaSalida < DateTime.Today || viaje.Bodega == 0 || (viaje.CamarotesTurista == 0 && viaje.CamarotesPremium == 0))
+                    {
+                        filaAuxCrucero.DefaultCellStyle.SelectionBackColor = Color.Red;
+                    }
+                    else
+                    {
+                        // Verifica si le queda poco espacio a la bodega o algunos de los camarotes se encuentra sin espacio
+                        // y pinta de color amarillo el crucero para advertir del estado
+                        if(viaje.Bodega < 100 || viaje.CamarotesTurista == 0 || viaje.CamarotesPremium == 0)
+                        {
+                            filaAuxCrucero.DefaultCellStyle.SelectionBackColor = Color.Yellow;
+                        }
+                    }
+
                     this.dgvCrucero.Rows.Add(filaAuxCrucero);
-
+                    
                     // Limpio la lista de pasajeros y muestro los pasajeros del viaje seleccionado
-
                     this.dgvPasajero.Rows.Clear();
 
                     if(viaje.ListaPasajeros.Count == 0)
