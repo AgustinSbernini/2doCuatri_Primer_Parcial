@@ -45,11 +45,11 @@ namespace Libreria_de_clases
         }
         public static int DuracionMaximaRegional { get { return Viaje.duracionMaximaRegional; } }
         public static int DuracionMaximaExtraRegional { get { return Viaje.duracionMaximaExtraregional; } }
-
+        public int DuracionDelViaje { get { return this.duracionDelViaje; } }
         public DateTime FechaSalida { get { return this.fechaSalida; } }
         public DateTime FechaLlegada { get { return this.fechaVuelta; } }
-        public string CostoPasajeTurista { get { return $"{this.costoPasajeTurista:c}"; } }
-        public string CostoPasajePremium { get { return $"{this.costoPasajePremium:c}"; } }
+        public double CostoPasajeTurista { get { return this.costoPasajeTurista; } }
+        public double CostoPasajePremium { get { return this.costoPasajePremium; } }
         public Crucero Crucero { get { return this.crucero; } }
         public List<Pasajero> ListaPasajeros { get { return this.listaPasajeros; } }
         private Viaje(DateTime fechaSalida, Crucero crucero)
@@ -68,7 +68,7 @@ namespace Libreria_de_clases
         public Viaje(DateTime fechaSalida, Crucero crucero, DestinosRegionales destino) : this(fechaSalida, crucero)
         {
             this.duracionDelViaje = this.generarDuracion.Next(duracionMinimaRegional, duracionMaximaRegional);
-            this.destino = destino.ToString();
+            this.destino = destino.ToString().Replace("_", ", ").Replace("1", " ");
             this.costoPasajeTurista = this.duracionDelViaje * precioPorHoraRegional;
             this.costoPasajePremium = this.costoPasajeTurista * precioExtraPremium;
             this.fechaVuelta = this.fechaSalida.AddDays(duracionDelViaje / 24);
@@ -76,7 +76,7 @@ namespace Libreria_de_clases
         public Viaje(DateTime fechaSalida, Crucero crucero, DestinosExtraregionales destino) : this(fechaSalida, crucero)
         {
             this.duracionDelViaje = this.generarDuracion.Next(duracionMinimaExtraregional, duracionMaximaExtraregional);
-            this.destino = destino.ToString();
+            this.destino = destino.ToString().Replace("_", ", ").Replace("1", " ");
             this.costoPasajeTurista = this.duracionDelViaje * precioPorHoraExtraregional;
             this.costoPasajePremium = this.costoPasajeTurista * precioExtraPremium;
             this.fechaVuelta = this.fechaSalida.AddDays(duracionDelViaje / 24);
@@ -88,10 +88,15 @@ namespace Libreria_de_clases
 
             retorno.AppendLine($"El Viaje se realizará desde {this.ciudadDePartida} a {this.destino}");
             retorno.Append($"El viaje comienza el día {this.fechaSalida:d}");
-            retorno.Append($", tendra una duración de {this.duracionDelViaje}hs");
-            retorno.AppendLine($"y se viajara en el crucero {this.crucero.Nombre}-{this.crucero.Matricula}");
-            retorno.AppendLine($"Quedan {this.cantidadCamarotesDisponiblesPremium} camarotes premiums libres y cuestan ${ this.costoPasajePremium}");
-            retorno.AppendLine($"Quedan {this.cantidadCamarotesDisponiblesTurista} camarotes premiums libres y cuestan ${ this.costoPasajeTurista}");
+            retorno.AppendLine($" y termina el día {this.fechaVuelta:d}");
+            retorno.AppendLine($"Por lo que tendra una duración de {this.duracionDelViaje} hs");
+            retorno.AppendLine($"Se viajara en el crucero {this.crucero.Nombre}-{this.crucero.Matricula}");
+            retorno.AppendLine($"Queda un total de {this.cantidadCamarotesDisponiblesTurista} camarotes premiums libres");
+            retorno.AppendLine($"Los cuales cuestan cada uno { this.costoPasajeTurista:c}");
+            retorno.AppendLine($"Queda un total de {this.cantidadCamarotesDisponiblesPremium} camarotes premiums libres");
+            retorno.AppendLine($"Los cuales cuestan cada uno { this.costoPasajePremium:c}");
+
+            retorno.AppendLine($"En total el viaje todavía soporta {this.Bodega} kg de Equipaje");
 
             return retorno.ToString();
         }
@@ -151,7 +156,6 @@ namespace Libreria_de_clases
 
             return viaje;
         }
-
         public override bool Equals(object obj)
         {
             bool retorno = false;

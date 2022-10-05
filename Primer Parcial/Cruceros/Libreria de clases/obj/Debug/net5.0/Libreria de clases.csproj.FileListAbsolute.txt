@@ -1,4 +1,3 @@
-C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Libreria de clases\obj\Debug\net5.0\Libreria de clases.csproj.AssemblyReference.cache
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Libreria de clases\obj\Debug\net5.0\Libreria de clases.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Libreria de clases\obj\Debug\net5.0\Libreria de clases.AssemblyInfoInputs.cache
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Libreria de clases\obj\Debug\net5.0\Libreria de clases.AssemblyInfo.cs
@@ -10,3 +9,4 @@ C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Crucero
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Libreria de clases\obj\Debug\net5.0\Libreria de clases.dll
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Libreria de clases\obj\Debug\net5.0\ref\Libreria de clases.dll
 C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Libreria de clases\obj\Debug\net5.0\Libreria de clases.pdb
+C:\Users\flias\source\repos\Laboratorio---Programacion-II\Primer Parcial\Cruceros\Libreria de clases\obj\Debug\net5.0\Libreria de clases.csproj.AssemblyReference.cache

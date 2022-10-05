@@ -20,7 +20,9 @@ namespace Forms
         public FrmLogin()
         {
             InitializeComponent();
-
+        }
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
             // Seteo de mensajes de ayuda al pasar el mouse por arriba de las cajas de texto o boton
             this.ttMensaje.SetToolTip(this.txtUsuario, "Ingrese el usuario designado en Readme");
             this.ttMensaje.SetToolTip(this.txtContraseña, "Ingrese la contraseña designada en Readme para su usuario");
@@ -29,12 +31,10 @@ namespace Forms
             // Creacion de usuarios y contraseñas
             usuarios = new string[] { "Maximiliano", "Facundo", "Felipe", "Agustin" };
             contraseñas = new string[] { "maxi123", "facu123", "feli123", "agus123" };
-            this.txtUsuario.Text = "Agustin";
-            this.txtContraseña.Text = "agus123";
+
             // Verificador de login
             loginCorrecto = 1;
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             // Comprobar si usuario y contraseñas son correctos
@@ -107,5 +107,7 @@ namespace Forms
 
             return retorno;
         }
+
+        
     }
 }

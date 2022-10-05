@@ -11,7 +11,7 @@ using Libreria_de_clases;
 
 namespace Forms
 {
-    public partial class FrmCrearViaje : Form
+    public partial class FrmCrearViajes : Form
     {
         List<Crucero> listCruceros;
         List<Viaje> listViajes;
@@ -20,34 +20,34 @@ namespace Forms
         bool validarFecha = false;
         bool validarViaje = false;
 
-        public FrmCrearViaje()
+        public FrmCrearViajes()
         {
             InitializeComponent();
         }
 
-        public FrmCrearViaje(List<Crucero> listCruceros, List<Viaje> listViajes) : this()
-        { 
+        public FrmCrearViajes(List<Crucero> listCruceros, List<Viaje> listViajes) : this()
+        {
             // Carga del FrmIndex la lista de cruceros y la lista de viajes actuales
             this.listCruceros = listCruceros;
             this.listViajes = listViajes;
         }
 
-        private void FrmCrearViaje_Load(object sender, EventArgs e)
+        public void FrmBaseCrearViajeVenderCrucero_Load(object sender, EventArgs e)
         {
             // Recorre la lista de cruceros y agrega el nombre de cada crucero
             // en el combo box de Crucero
-            this.cbCrucero.Items.Clear();
+            this.cbCruceros.Items.Clear();
 
             foreach (Crucero crucero in listCruceros)
             {
-                this.cbCrucero.Items.Add(crucero.Nombre);
+                this.cbCruceros.Items.Add(crucero.Nombre);
             }
 
             // Inicializa el radio button Regionales en check
             this.rbRegionales.Checked = true;
         }
 
-        private void rbRegionales_CheckedChanged(object sender, EventArgs e)
+        public void rbRegionales_CheckedChanged(object sender, EventArgs e)
         {
             // Comprueba si el radio button Regionales esta con su check
             // Limpia los items que esten cargados anteriormente en el combo box de Destinos
@@ -65,7 +65,7 @@ namespace Forms
             }
         }
 
-        private void rbExtraRegionales_CheckedChanged(object sender, EventArgs e)
+        public void rbExtraRegionales_CheckedChanged(object sender, EventArgs e)
         {
             // Comprueba si el radio button Extra Regionales esta con su check
             // Limpia los items que esten cargados anteriormente en el combo box de Destinos
@@ -83,35 +83,36 @@ namespace Forms
             }
         }
 
-        private void cbCrucero_SelectedIndexChanged(object sender, EventArgs e)
+        public void cbCruceros_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Recoge del combo box de Cruceros el indice de crucero seleccionado y lo busca dentro de la lista de Cruceros
-            indexCrucero = this.cbCrucero.SelectedIndex;
+            // Recoge del combo box de Cruceros el indice de crucero seleccionado y
+            // lo busca dentro de la lista de Cruceros
+            indexCrucero = this.cbCruceros.SelectedIndex;
             cruceroSeleccionado = listCruceros[indexCrucero];
 
             // Limpia los combo box por si tienen datos cargados anteriormente
             this.cbFechaInicio.Items.Clear();
-            this.cbFechaFinal.Items.Clear();
+            this.cbFechaLlegada.Items.Clear();
 
             // Recorre la lista de viajes buscando todos los viajes en los que participa el crucero seleccionado
             // E informa todas las fechas de salida y de llegada que tiene dicho crucero en cada viaje
             foreach (Viaje viaje in listViajes)
             {
-                if(viaje == cruceroSeleccionado)
+                if (viaje == cruceroSeleccionado)
                 {
                     this.cbFechaInicio.Items.Add(viaje.FechaSalida);
-                    this.cbFechaFinal.Items.Add(viaje.FechaLlegada);
+                    this.cbFechaLlegada.Items.Add(viaje.FechaLlegada);
                 }
             }
             // Selecciona las fechas de salida y de llegada del primer viaje encontrado
-            if(cbFechaInicio.Items.Count != 0)
+            if (cbFechaInicio.Items.Count != 0)
             {
                 this.cbFechaInicio.SelectedItem = this.cbFechaInicio.Items[0];
-                this.cbFechaFinal.SelectedItem = this.cbFechaFinal.Items[0];
+                this.cbFechaLlegada.SelectedItem = this.cbFechaLlegada.Items[0];
             }
         }
 
-        private void dtpFechaSalida_CloseUp(object sender, EventArgs e)
+        public void dtpFechaSalida_CloseUp(object sender, EventArgs e)
         {
             // Si el radio button de viajes Regionales esta en check recorre el combo box de Fecha de Inicio
             // Para verificar si es que el crucero tiene algun viaje cargado, de ser asi evita que puedan ser seleccionadas
@@ -123,7 +124,7 @@ namespace Forms
                 for (int i = 0; i < cbFechaInicio.Items.Count; i++)
                 {
                     if (this.dtpFechaSalida.Value.AddDays(Viaje.DuracionMaximaRegional / 24) > ((DateTime)this.cbFechaInicio.Items[i]) &&
-                        this.dtpFechaSalida.Value < ((DateTime)this.cbFechaFinal.Items[i]).AddDays(1))
+                        this.dtpFechaSalida.Value < ((DateTime)this.cbFechaLlegada.Items[i]).AddDays(1))
                     {
                         MessageBox.Show("La fecha indicada no esta habilitada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         validarFecha = false;
@@ -141,7 +142,7 @@ namespace Forms
                 for (int i = 0; i < cbFechaInicio.Items.Count; i++)
                 {
                     if (this.dtpFechaSalida.Value.AddDays(Viaje.DuracionMaximaExtraRegional / 24) > ((DateTime)this.cbFechaInicio.Items[i]) &&
-                        this.dtpFechaSalida.Value < ((DateTime)cbFechaFinal.Items[i]).AddDays(1))
+                        this.dtpFechaSalida.Value < ((DateTime)cbFechaLlegada.Items[i]).AddDays(1))
                     {
                         MessageBox.Show("La fecha indicada no esta habilitada", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         validarFecha = false;
@@ -155,16 +156,16 @@ namespace Forms
             }
         }
 
-        private void cbFechaInicio_SelectedIndexChanged(object sender, EventArgs e)
+        public void cbFechaInicio_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Si cambia la fecha de inicio del crucero se vizualizara tambien la fecha de llegada en conjunto
-            this.cbFechaFinal.SelectedIndex = this.cbFechaInicio.SelectedIndex;            
+            this.cbFechaLlegada.SelectedIndex = this.cbFechaInicio.SelectedIndex;
         }
 
-        private void btnCrearCrucero_Click(object sender, EventArgs e)
+        public void btnCrearViaje_Click(object sender, EventArgs e)
         {
             // En caso de que el crucero no tenga ningun viaje cargado no se tendra que validar una fecha
-            if(cbFechaInicio.Items.Count == 0)
+            if (cbFechaInicio.Items.Count == 0)
             {
                 validarFecha = true;
             }
@@ -173,21 +174,22 @@ namespace Forms
             // Avisando de dicho inconveniente con un mensaje de error
             // En caso contrario verifica cual radio button esta en Check y crea un viaje nuevo
             // Con la fecha de salida, el crucero y el destino seleccionado.
-            if(this.cbDestinos.SelectedIndex == -1 || this.cbCrucero.SelectedIndex == -1 || validarFecha == false)
+            if (this.cbDestinos.SelectedIndex == -1 || this.cbCruceros.SelectedIndex == -1 || validarFecha == false)
             {
                 MessageBox.Show("Al menos uno de los datos ingresados es incorrecto, verifique de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if(rbRegionales.Checked == true)
+                if (rbRegionales.Checked == true)
                 {
                     // Recorre el Enum de Destinos Regionales hasta encontrar el match con el seleccionado
-                    foreach(DestinosRegionales destino in Enum.GetValues(typeof(DestinosRegionales)))
+                    foreach (DestinosRegionales destino in Enum.GetValues(typeof(DestinosRegionales)))
                     {
-                        if(cbDestinos.SelectedIndex == (int) destino)
+                        if (cbDestinos.SelectedIndex == (int)destino)
                         {
                             listViajes.Add(new Viaje(dtpFechaSalida.Value, cruceroSeleccionado, destino));
                             validarViaje = true;
+                            break;
                         }
                     }
                 }
@@ -196,24 +198,29 @@ namespace Forms
                     // Recorre el Enum de Destinos Extra Regionales hasta encontrar el match con el seleccionado
                     foreach (DestinosExtraregionales destino in Enum.GetValues(typeof(DestinosExtraregionales)))
                     {
-                        if(cbDestinos.SelectedIndex == (int)destino)
+                        if (cbDestinos.SelectedIndex == (int)destino)
                         {
                             listViajes.Add(new Viaje(dtpFechaSalida.Value, cruceroSeleccionado, destino));
                             validarViaje = true;
+                            break;
                         }
                     }
                 }
 
                 // Si el viaje fue creado correctamente actualiza la lista de viajes del Form Index
                 // Y cierra el Form CrearViaje
-                if(validarViaje)
+                if (validarViaje)
                 {
-                    FrmIndex frmIndex = Owner as FrmIndex;
-                    frmIndex.Viajes = listViajes;
+                    validarFecha = false;
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
             }
+        }
+
+        public void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

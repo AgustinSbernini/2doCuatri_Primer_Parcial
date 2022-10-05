@@ -111,6 +111,7 @@ namespace Forms
             this.btnVenderCrucero.TabIndex = 11;
             this.btnVenderCrucero.Text = "Vender Crucero";
             this.btnVenderCrucero.UseVisualStyleBackColor = true;
+            this.btnVenderCrucero.Click += new System.EventHandler(this.btnVenderCrucero_Click);
             // 
             // btnInfoDetallada
             // 
@@ -122,6 +123,7 @@ namespace Forms
             this.btnInfoDetallada.TabIndex = 13;
             this.btnInfoDetallada.Text = "Informacion detallada";
             this.btnInfoDetallada.UseVisualStyleBackColor = true;
+            this.btnInfoDetallada.Click += new System.EventHandler(this.btnInfoDetallada_Click);
             // 
             // btnHistorialViajes
             // 

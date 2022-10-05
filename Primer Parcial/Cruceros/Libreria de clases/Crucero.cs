@@ -78,10 +78,25 @@ namespace Libreria_de_clases
         {
             StringBuilder retorno = new();
 
-            retorno.Append($"{this.nombre} - {this.matricula}");
-            retorno.Append($"{this.cantidadCamarotesTurista} {this.cantidadCamarotesPremium} - {this.cantidadComedores}");
-            retorno.Append($"{this.cantidadGimnasios} - {this.cantidadPiscinas}");
-            retorno.Append($"{this.cantidadCasinos} - {this.pesoBodega}");
+            retorno.AppendLine($"Crucero: {this.nombre} - {this.matricula}");
+            retorno.AppendLine($"Cuenta con un total de {this.cantidadCamarotesTurista} camarotes para pasajeros clase Turistas.");
+            retorno.AppendLine($"Cuenta con un total de {this.cantidadCamarotesPremium} camarotes para pasajeros clase Premium");
+            retorno.AppendLine($"Dentro de sus instalaciones posee:");
+            retorno.AppendLine($"\t{this.Comedores} Comedor/es");
+            if (this.cantidadGimnasios > 0)
+            {
+                retorno.AppendLine($"\t{this.cantidadGimnasios} Gimnasio/s");
+            }
+            if (this.cantidadPiscinas > 0)
+            {
+                retorno.AppendLine($"\t{this.cantidadPiscinas} Piscina/s");
+            }
+            if (this.cantidadCasinos > 0)
+            {
+                retorno.AppendLine($"\t{this.cantidadCasinos} Casino/s");
+            }
+
+            retorno.Append($"\tY el peso maximo que soporta la bodega es de {this.pesoBodega}kg");
 
             return retorno.ToString();
         }

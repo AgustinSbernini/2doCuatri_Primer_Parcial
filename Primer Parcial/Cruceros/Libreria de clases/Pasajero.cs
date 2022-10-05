@@ -27,8 +27,6 @@ namespace Libreria_de_clases
             this.edad = DateTime.Today.AddTicks(-fechaNacimiento.Ticks).Year - 1;
         }
 
-
-
         public static bool operator == (Pasajero p1, Pasajero p2)
         {
             return p1.Dni == p2.Dni;
@@ -36,6 +34,34 @@ namespace Libreria_de_clases
         public static bool operator !=(Pasajero p1, Pasajero p2)
         {
             return !(p1 == p2);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder retorno = new();
+
+            retorno.AppendLine($"Pasajero: {this.Apellido}, {this.Nombre} de {this.Edad} años");
+            retorno.AppendLine($"Clase: {this.Clase} y lleva consigo: ");
+            if(this.Equipaje.BolsoDeMano)
+            {
+                retorno.AppendLine($"\t1 bolso de mano");
+            }
+            if(this.Equipaje.CantidadValijas > 0)
+            {
+                retorno.AppendLine($"\t{this.Equipaje.CantidadValijas} valijas con un peso total de {this.Equipaje.PesoTotalValijas}kg");
+            }
+            retorno.AppendLine($"************** Datos del Pasaporte  **************");
+            retorno.AppendLine($"DNI: {this.Dni}");
+            retorno.AppendLine($"Fecha de nacimiento: {this.FechaNacimiento:d}");
+            retorno.AppendLine($"Numero del Pasaporte: {this.NumeroPasaporte}");
+            retorno.AppendLine($"Fecha de vencimiento: {this.FechaVencimiento:d}");
+            retorno.AppendLine($"Nacionalidad: {this.Nacionalidad}");
+            retorno.AppendLine($"Sexo: {this.Sexo}");
+            retorno.AppendLine($"****************************************************");
+            retorno.AppendLine();
+            retorno.AppendLine();
+
+            return retorno.ToString();
         }
         public override bool Equals(object obj)
         {

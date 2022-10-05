@@ -11,7 +11,7 @@ namespace Libreria_de_clases
         private string nombre;
         private string apellido;
         private int dni;
-        private string numeroPasaporte; // ZZZ000000 <- formato triple Z + numero de 6 digitos
+        private string numeroPasaporte; // ZZZ000000 <- formato tres letras + numero de 6 digitos
         private string nacionalidad;
         private DateTime fechaNacimiento;
         private DateTime fechaVencimiento;
@@ -31,7 +31,7 @@ namespace Libreria_de_clases
         }
 
         public int Dni { get { return this.dni; } }
-
+        public string NombreCompleto { get { return $"{this.Apellido}, {this.Nombre}"; } }
         public string Nombre { get => nombre; }
         public string Apellido { get => apellido; }
         public Sexo Sexo { get => sexo; }
